@@ -262,6 +262,9 @@ bool is_charger_exist(struct mtk_charger *info)
 	static struct power_supply *chg_psy;
 	int ret;
 
+	prop.intval = 0;
+	prop2.intval = 0;
+	prop3.intval = 0;
 	chg_psy = info->chg_psy;
 
 	if (chg_psy == NULL || IS_ERR(chg_psy)) {
